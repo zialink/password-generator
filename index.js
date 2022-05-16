@@ -39,3 +39,33 @@ function generatePasswords() {
     input4El.value += characterArray[d];
   }
 }
+
+function copyToClipboard() {
+  let inputId = document.activeElement.id;
+
+  console.log(inputId);
+
+  if (inputId === "input1") {
+    input1El.select();
+    input1El.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(input1El.value);
+  }
+  if (inputId === "input2") {
+    input2El.select();
+    input2El.setSelectionRange(0, 99999); /* For mobile devices */
+    navigator.clipboard.writeText(input2El.value);
+  }
+  if (inputId === "input3") {
+    input3El.select();
+    input3El.setSelectionRange(0, 99999); /* For mobile devices */
+    navigator.clipboard.writeText(input3El.value);
+  }
+  if (inputId === "input4") {
+    input4El.select();
+    input4El.setSelectionRange(0, 99999); /* For mobile devices */
+    navigator.clipboard.writeText(input4El.value);
+  }
+
+  /* Alert the copied password */
+  dividerEl.textContent = "Password copied to the clipboard!";
+}

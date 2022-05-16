@@ -44,10 +44,10 @@ body {
 
 button {
   background-color: #10b981;
-  align-items: center;
   border: none;
   border-radius: 6px;
-  padding: 5px 20px;
+  padding: 0 20px;
+  height: 60%;
   margin-right: 30px;
   font-size: 1rem;
   color: white;
@@ -69,12 +69,12 @@ button {
 .sub-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 input #password-limit {
   width: 20%;
   padding: 10px 10px;
-  margin-right: 0;
   border-radius: 2px;
   color: white;
 }
